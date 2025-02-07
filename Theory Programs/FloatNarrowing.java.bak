@@ -1,0 +1,21 @@
+class FloatNarrowing 
+{
+	public static void main(String[] args) 
+	{
+		
+
+		float f = 34.55f; //cant use variable because its value can change
+		long l = (long)34.55f;
+		int i =(int)34.55f;
+		char c = (char)34.55f;
+		short s = (short)34.55f;
+		byte b = (byte)34.55f;
+
+		
+		System.out.println("long : "+l);
+		System.out.println("int : "+i);
+		System.out.println("char : "+c);
+		System.out.println("short : "+s);
+		System.out.println("byte : "+b);
+	}
+}

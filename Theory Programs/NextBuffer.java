@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class NextBuffer 
+{
+	public static void main(String[] args) 
+	{	
+		Scanner sc = new Scanner(System.in);
+	    //System.out.println("Enter name : ");
+		//String name = sc.nextLine();
+		System.out.println("enter age : ");
+		String age = sc.next();
+		//sc.nextLine();
+		System.out.println("Enter address : ");
+		String address = sc.nextLine();
+		//System.out.println(name);
+		System.out.println(age);
+		System.out.println(address);
+	}
+}

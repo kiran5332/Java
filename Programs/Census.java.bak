@@ -1,0 +1,14 @@
+class Census 
+{
+	public static void main(String[] args) 
+	{
+		long currPop =312032486;
+		long seconds =(365*24*60*60)*5;
+		int birth = seconds/7;
+		int death = seconds/13;
+		int imm = seconds/45;
+		long newPop = currPop+birth-death+imm;
+		System.out.printn("population after 5 years : "+newPop);
+
+	}
+}
