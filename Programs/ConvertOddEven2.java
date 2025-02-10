@@ -1,0 +1,44 @@
+import java.util.Scanner;
+class ConvertOddEven 
+{
+	public static void main(String[] args) 
+	{	
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter a Number : ");
+		String num = sc.next();
+		
+		System.out.println(num.charAt(1));
+		num.charAt(2) =(char) (num.charAt(1)+1);
+		System.out.println(ch2);
+		System.out.println((num.charAt(1))+1);
+
+
+		if((num.length())%2==0){
+			
+			for(int i=0;i<num.length();i++){
+				
+				char ch = num.charAt(i);
+				if(ch%2==1){}
+					//num.charAt(i)=(char) (ch+1);
+
+			}
+			
+
+		}else{
+			
+			for(int i=0;i<num.length();i++){
+				
+				char ch = num.charAt(i);
+				if(ch%2==0){}
+					//num.charAt(i)= (char)ch+1;
+
+			}
+
+		}
+
+		System.out.println(" Number : "+ num);
+
+	}
+
+}
