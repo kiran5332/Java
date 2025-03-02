@@ -1,0 +1,66 @@
+class RotateNumber 
+{
+	public static void main(String[] args) 
+	{
+		int num=452;
+		
+		int rot=rotate(num);
+		/*while(rot!=num){
+			System.out.print(rot);
+			System.out.println("  "+isPrime(rot));
+			rot=rotate(rot);
+		}
+		System.out.println(rot);*/
+
+		do{
+
+			System.out.println(rot);
+			System.out.println(isPrime(rot)?rot+" is prime":rot+" is not prime");
+			rot=rotate(rot);
+
+		}while(rot!=num);
+
+		System.out.println(rot);
+		System.out.println(isPrime(rot)?rot+" is prime":rot+" is not prime");
+	}
+
+	public static int rotate(int num)
+	{
+		return ((num%10)*power(count(num)-1))+(num/10);
+	}
+
+	public static int power(int pow)
+	{
+		int val=1;
+
+		for(int i=1;i<=pow;i++)
+			val*=10;
+
+		return val;
+		
+	}
+
+	public static int count(int num)
+	{	
+		int cnt=0;
+
+		for(int i=num;i>0;i/=10)
+			cnt++;
+
+		return cnt;
+	}
+
+	public static boolean isPrime(int num)
+	{
+		
+		int den=2;
+
+		while(den<num){
+			if(num%den==0)
+				return false;
+			den++;
+		}
+		
+		return den==num;
+	}
+}

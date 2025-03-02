@@ -1,0 +1,44 @@
+import java.util.Arrays;
+class keithNumber 
+{
+	public static void main(String[] args) 
+	{
+		int num=1234;
+		int dup=num;
+		int len=0;
+		int sum=0;
+
+		for(int i=num;i>0;i/=10)
+			len++;
+
+		int arr[] = new int[len];
+
+		while(sum<=num){
+			
+			if(sum==num){
+				System.out.println(num+" Keith Number");
+				break;
+			}
+
+			if(sum<num){
+				System.out.println(num+" Not a Keith Number");
+				break;
+			}
+
+
+			for(int i=arr.length-1;i>=0;i--){
+				arr[i]=dup%10;
+				sum+=arr[i];
+				dup/=10;
+			}
+
+			for(int i=1;i<arr.length;i++){
+				arr[i-1]=arr[i];
+			}
+			arr[arr.length-1]=sum;
+			System.out.println(Arrays.toString(arr));
+			System.out.println(sum);
+
+		}
+	}
+}
