@@ -1,0 +1,37 @@
+class StrongNumber 
+{
+	
+	public static boolean isStrong(int num){
+
+		return strong(num,0)==num?true:false;
+
+	}
+
+	public static int strong(int num,int sum){
+
+		if(num==0)
+			return sum;
+
+		sum+=fact(num%10);
+
+		return strong(num/10,sum);
+
+	}
+
+	public static int fact(int num){
+
+		if(num<=1)
+			return 1;
+
+		return fact(num-1)*num;
+
+	}
+
+	public static void main(String[] args) 
+	{
+		for(int i=1;i<=100000;i++){
+			if(isStrong(i))
+				System.out.println(i);
+		}
+	}
+}
