@@ -1,0 +1,38 @@
+//Minimum number of elements which can be swapped to make all elements in an array same
+class Cognizant 
+{
+	public static void main(String[] args) 
+	{
+		String str="aaabbiirr";
+		int freq=0;
+		char ch =' ';
+		
+		for(int i=0;i<str.length();i++){
+
+			int cnt=0;
+
+			for(int j=0;j<str.length();j++){
+
+				if(str.charAt(i)==str.charAt(j))
+					cnt++;
+				
+			}
+
+			if(cnt>freq){
+
+				freq=cnt;
+				ch=str.charAt(i);
+
+			}
+				
+		}
+
+		System.out.println(ch+" : "+freq);
+		for(int i=0;i<str.length();i++){
+
+		
+		System.out.println(str.replaceAll(".",String.valueOf(ch)));
+	}
+}
+
+}

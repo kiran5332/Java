@@ -1,0 +1,64 @@
+class RevolvingNumber 
+{	
+	static int arr[];
+	public static void main(String[] args) 
+	{
+		//System.out.println(revolving1(12345));
+		//fillArray(12345);
+		for(int i=1;i<=100;i++)
+			System.out.println(rotate(i));
+
+		//System.out.println(rotate(142857));
+		//System.out.println(power(count(142857)-1));
+	}
+
+	public static int revolving1(int num){
+
+		for(int i=2;i<=9;i++){
+
+			int val=num*i;
+			int rot=rotate(num);
+			
+			while(rot!=num){
+		
+				if(rot==val)
+					return i;
+				rot=rotate(rot);
+
+			}
+
+		}
+
+		return 0;
+	}
+
+	public static void revolving2(int num){
+		
+	}
+	
+	public static void fillArray(int num){
+		arr=new int[count(num)];
+	}
+
+	public static int  rotate(int num){
+		return ((num%10)*(power(count(num)-1)))+(num/10);
+	}
+
+	public static  int power(int index){
+		int pow=1;
+		for(int i=1;i<=index;i++)
+			pow*=10;
+		return pow;
+	}
+	
+	public static int count(int num){
+		int cnt=0;
+		while(num>0){
+			cnt++;
+			num/=10;
+		}
+		return cnt;
+	} 
+
+
+}

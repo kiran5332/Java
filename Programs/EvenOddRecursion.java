@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+class PrintOddEven  
+{
+	static ArrayList<Integer> arrEven = new ArrayList<>();
+	static ArrayList<Integer> arrOdd = new ArrayList<>();
+
+	public static void oddEven(int var){
+
+		if(var<1)
+			return ;
+
+		oddEven(var-1);
+		
+		if((var/2)*2==var)
+			arrEven.add(var);
+		else
+			arrOdd.add(var);
+
+
+	}
+
+	public static void main(String[] args) 
+	{
+		oddEven(10);
+		System.out.println(arrEven);
+		System.out.println(arrOdd);
+	}
+}
